@@ -1,0 +1,20 @@
+
+<li [ngClass]="{'list-group-item': true,
+'list-group-item-success': postLoveit > 0,
+'list-group-item-danger': postLoveit < 0}">
+     
+     <div class="row">
+         <h2 class="col-md-12">{{postTitle}}</h2>
+         <hr>
+         <p>{{postCreated | date: 'dd/MM/yyyy, HH:mm' | uppercase}}</p>
+    </div>
+    <div class="row">
+        <h6>
+                {{postContent}}
+        </h6>
+    </div>
+    <div class="row">
+        <div class="col-md-2"><button class="btn btn-success" (click)="OnLove()">love it</button></div>
+        <div class="col-md-2"><button class="btn btn-danger" (click)="onDontLove()">don't love it</button></div>
+    </div>
+    </li>
